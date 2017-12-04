@@ -7,12 +7,6 @@ public class AppletRuch extends Applet implements Runnable
     private int m_X = 60, m_Y = 0, m_oldX, m_oldY;
     private Thread wateczek;
  
-    public void init() 
-    {
-        setBackground(Color.black);
-        m_oldX = m_X;
-        m_oldY = m_Y;
-    }
  
     public void start() 
     {
@@ -21,7 +15,15 @@ public class AppletRuch extends Applet implements Runnable
         wateczek.start();
     }
  
-
+    public void stop() 
+    {
+        if (wateczek != null)
+        {
+            wateczek.stop();
+            wateczek = null; 
+        }
+    }
+ 
     public void run() 
     {
         boolean gora = false;
