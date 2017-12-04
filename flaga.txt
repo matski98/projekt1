@@ -13,14 +13,7 @@ public class AppletRuch extends Applet implements Runnable
         m_oldX = m_X;
         m_oldY = m_Y;
     }
- 
-    public void start() 
-    {
-        if (wateczek == null)
-            wateczek = new Thread(this, "Rysownik");
-        wateczek.start();
-    }
- 
+    
     public void stop() 
     {
         if (wateczek != null)
