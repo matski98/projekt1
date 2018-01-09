@@ -1,0 +1,36 @@
+assembla:
+-system kontroli wersji (git, svn lub inny)
+-praca zespo³owa:
+	-Wiki:
+		-pe³na edycja stron wiki
+	-grupa
+	-aktywnoœæ:
+		-zdarzenia
+		-powiadomienia mailowe
+	-administracja (narzêdziami, wygl¹dem, bezpieczeñstwem, portfolio, serwisem)
+	-wiadomoœci:
+		-mo¿liwoœæ pe³nej edycji wiadomoœci
+	-punkty docelowe:
+		-mo¿liwoœæ tworzenia punktu docelowego (milestone)
+		-pomaga zaplanowaæ prace w projekcie
+		-edycja punktu docelowgo
+		-kalendarz
+	-stand up:
+		-codzienne spotkania na których ka¿da osoba z zespo³u opowiada:
+			-co robi³a wczoraj
+			-co ma do zrobienia dzisiaj
+			-czy wyst¹pi³y jakieœ problemy
+		-tworzenie raportu
+	-tickety:
+		-mo¿liwoœæ ustawienia: statusu, priorytetu, zlecenia, punktu docelowego, oszacowania czasu pracy, cardwall
+	-kod Ÿród³owy:
+		-przegl¹d plików w rezpozytorium
+		-przegl¹d commitów do rezpozytorium
+-stworzony do komercyjnych zastosowañ(dwutygodniowy okres darmowy nastêpnie koszt od 13.29$ do 36.20$)
+-zawiera takie pakiety jak: Jira, GitHub, Trello
+GIT:
+TortoiseSVN:
+kanban:
+Microsoft Visual Studio:
+-zintegrowane œrodowisko programistyczne
+-zawiera edytor kodu oraz mechanizmy refaktoryzacji kodu
