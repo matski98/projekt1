@@ -65,3 +65,36 @@ ciag1 = numpy.arange(1,10,2.5)
 print(ciag1)
 ciag2 = numpy.linspace(1,10,num=5)
 print(ciag2)
+#10
+def funkcja(x):
+    return x**3-3*x
+import matplotlib.pyplot as plt
+x = np.linspace(-10,10)
+# inicjalizacja pustej listy
+y = []
+# pętla for
+for i in x:
+    #dodawanie wyników wykonania funkcji do listy
+    y.append(funkcja(i))
+# wprowadzenie danych do wykresu    
+plt.plot(x, y)
+plt.title('Wykres przykładowy 1')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend('Wykres 1')
+plt.show()
+
+x = np.linspace(-10,10)
+# funkcja typu inline preferowana w Pythonie wykonująca zadanie for z poprzedniego przykładu 
+y = [funkcja(i) for i in x]
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+
+x = np.linspace(-10,10)
+y = funkcja(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
