@@ -1,0 +1,86 @@
+import UIKit
+
+var str = "Hello, playground"
+print(str)
+
+var i = 10
+var d = 10.0
+
+let s1:String = "stala"
+let s2:Int = 123
+let s3:Double = 0.5
+
+let kon1:String = "\(i) \(d)"
+let kon2:String = String(i)+" "+String(d)
+print(kon1)
+print(kon2)
+var tab = [1,2,3]
+var dic = ["k1":1,"k2":2]
+print(tab)
+print(dic)
+tab.append(4)
+dic["k3"] = 3
+print(tab)
+print(dic)
+
+var lotto = ["29-11-14":[4,5,21,30,31,49],"27-11-14":[5,8,10,19,23,40]]
+print(lotto)
+
+var aso = [String:Int]()
+
+print(aso)
+var slownik = [Character:Int]()
+var indeks = 1
+for item in "ABCDEFGHIJ"{
+    slownik[item] = indeks
+    indeks += 1
+}
+
+print(slownik)
+
+for day in lotto{
+    print("Losowanie dnia \(day.key):")
+    for wynik in day.value{
+        print(wynik)
+    }
+}
+
+func NWD(x:Int,y:Int) -> Int{
+    return y == 0 ? x:NWD(x:y, y:x % y)
+}
+
+print(NWD(x:100,y:10))
+
+func NWD2(x:Int,y:Int) -> (nwd:Int,iloraz1:Int,iloraz2:Int){
+    let nwd = NWD(x:x,y:y)
+    return (nwd,x/nwd,y/nwd)
+}
+
+print(NWD2(x:24,y:8))
+
+func zamiana(char:Character) -> Character{
+    var dict: [Character:Character] = ["G":"A","A":"G","D":"E","E":"D","R":"Y","Y":"R","P":"O","O":"P","L":"U","U":"L","K":"I","I":"K"]
+    return dict[char] ?? char
+}
+
+func cipher(wejscie:String, funkcja:(Character) -> Character) -> String{
+    var wyjscie:String = ""
+    for c in wejscie{
+        wyjscie = wyjscie+String(funkcja(c))
+    }
+    return wyjscie
+}
+
+var zmieniony = cipher(wejscie: "ABCDEFGHIJ", funkcja:zamiana)
+print(cipher(wejscie: zmieniony, funkcja:zamiana))
+
+var parzysta: (Int) -> (Int) = { a in
+    return a%2
+}
+
+print(parzysta(2))
+
+for (dzien,wyniki) in lotto {
+    let mapped = wyniki.map(parzysta)
+    print("Losowanie dnia \(dzien) \(mapped)")
+}
